@@ -1,6 +1,7 @@
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
+const PORT = process.env.PORT || 5000;
 
 const express = require('express')
 const app = express()
@@ -185,5 +186,7 @@ app.get('/reporter', checkAuthenticated, (req, res) => {
     res.render('archives.ejs')
   })
   
-
-app.listen(3000)
+  app.listen(PORT, function() {
+    console.log('Chat server running');
+  });
+// app.listen(3000)
