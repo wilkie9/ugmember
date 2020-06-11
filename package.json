@@ -6,6 +6,10 @@
   "scripts": {
     "devStart": "nodemon server.js"
   },
+  "engines": {
+    "node": "13.11.0",
+    "npm": "5.7.1", 
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
