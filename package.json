@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "devStart": "nodemon server.js",
-    "node": "13.11.0",
-    "npm": "6.13.1" },
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
