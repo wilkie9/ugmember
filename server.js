@@ -112,9 +112,7 @@ function checkNotAuthenticated(req, res, next) {
 app.get('/archives', checkAuthenticated, (req, res) => {
     res.render('archives.ejs')
   })
-app.get('/archives', checkNotAuthenticated, (req, res) => {
-  res.render('archives.ejs')
-})
+
 
   
 
@@ -129,6 +127,9 @@ app.get('/upload', checkAuthenticated, (req, res) => {
 })
 
 
+app.get('/contact', checkAuthenticated, (req, res) => {
+  res.render('contact.ejs')
+})
 
 app.get('/community', checkAuthenticated, (req, res) => {
   res.render('community.ejs')
@@ -152,8 +153,10 @@ app.get('/reporter', checkAuthenticated, (req, res) => {
   app.get('/headshop', checkAuthenticated, (req, res) => {
     res.render('headshop.ejs')
   })
-
-  app.get('/headshop', checkNotAuthenticated, (req, res) => {
+  app.get('/cart', checkAuthenticated, (req, res) => {
+    res.render('cart.ejs')
+  })
+  app.get('/headshop', checkAuthenticated, (req, res) => {
     res.render('headshop.ejs')
   })
   
@@ -161,32 +164,16 @@ app.get('/reporter', checkAuthenticated, (req, res) => {
     res.render('headshop.ejs')
   })
 
-  app.get('/home', checkNotAuthenticated, (req, res) => {
-    res.render('home.ejs')
-  })
   
  app.get('/livestream', checkAuthenticated, (req, res) => {
     res.render('livestream.ejs')
   })
-  app.get('/livestream', checkNotAuthenticated, (req, res) => {
-    res.render('livestream.ejs')
-  }) 
+
   
   app.get('/join', checkAuthenticated, (req, res) => {
     res.render('join.ejs')
   })
-  app.get('/join', checkNotAuthenticated, (req, res) => {
-    res.render('join.ejs')
-  })
-  
-  app.get('/archives', checkAuthenticated, (req, res) => {
-    res.render('archives.ejs')
-  })
-  app.get('/archives', checkNotAuthenticated, (req, res) => {
-    res.render('archives.ejs')
-  })
-  
+
   app.listen(PORT, function() {
-    console.log('Chat server running');
+    console.log('server running at port 5000');
   });
-// app.listen(3000)
